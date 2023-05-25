@@ -1,0 +1,443 @@
+@import "./reset.css";
+
+@font-face {
+    font-family: Disket-Mono-Regular;
+    src: url(../fonts/Disket-Mono-Regular.ttf)
+}
+@font-face {
+    font-family: Disket-Mono-Bold;
+    src: url(../fonts/Disket-Mono-Bold.ttf);
+}
+@font-face {
+    font-family: Museo-Sans-Cyrl;
+    src: url(../fonts/museosanscyrl-500.ttf);
+}
+body {
+    background: #0E0D0D;
+    color: #E1E0DF;
+    overflow-x: hidden;
+}
+.container {
+    max-width: 1312px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/*-------- header ---------*/
+
+.header__top {
+    background: #0E0D0D;
+    position: sticky;
+    top: 0;
+    padding-top: 23px;
+    z-index: 2;
+}
+.nav-ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__link {
+    font-family: Disket-Mono-Regular, sans-serif;
+    color: #E1E0DF;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    position: relative;
+    cursor: url("../img/cursor.png") 4 1, default;
+}
+.nav__link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    background: none repeat scroll 0 0 transparent;
+    height: 2px;
+    width: 0;
+    background: #E1E0DF;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+.nav__link:hover::after {
+    width: 100%;
+    left: 0;
+}
+.header__title-main {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 27px;
+}
+.header__P-menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 234px;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 9px;
+    width: 265px;
+    text-decoration: underline;
+}
+#menu-link-first {
+    max-width: 210px;
+}
+#menu-link-second {
+    max-width: 265px;
+}
+.menu__link {
+    color: #E1E0DF;
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-size: 20px;
+    transition: all .5s;
+    cursor: url("../img/cursor.png") 4 1, default;
+}
+.menu__link:hover {
+    text-decoration: underline;
+    color: #956F29;
+}
+.header__info-img {
+    display: flex;
+    flex-direction: column;
+}
+.header-info-1 {
+    font-family: Museo-Sans-Cyrl, sans-serif;
+    font-size: 17px;
+    max-width: 280px;
+    font-weight: 400;
+    line-height: 20px;
+}
+.header-info-2 {
+    font-family: Museo-Sans-Cyrl, sans-serif;
+    font-size: 17px;
+    max-width: 341px;
+    text-align: right;
+    font-weight: 400;
+    line-height: 20px;
+}
+.header__P-img {
+    max-width: 248px;
+}
+.header__D-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 258px;
+}
+.header__footer-title {
+    padding-top: 44px;
+}
+
+/*--------- main ----------*/
+
+/*--------- о компании ----------*/
+
+.about-company__items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 267px;
+}
+.about-company__info-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.company-name-text {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+}
+.company-description-text {
+    font-family: Museo-Sans-Cyrl, sans-serif;
+    font-size: 19px;
+    max-width: 507px;
+    line-height: 23px;
+    text-align: justify;
+}
+.img-coatings {
+    max-width: 462px;
+}
+
+/*--------- напыление ----------*/
+
+/*--------- типы покрытий ----------*/
+
+.types-coatings__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+}
+.coating-items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+.coatings-h2 {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-size: 28px;
+    text-align: center;
+}
+.types-coatings__row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.coating-type-text {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+.coating-img {
+    max-width: 168px;
+    max-height: 540px;
+}
+
+/*--------- оборудование для напыления ----------*/
+
+/*--------- расходные материалы ----------*/
+
+/*--------- наши услуги ----------*/
+
+.services__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 45px;
+}
+.services-list-ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: inherit;
+}
+.services-title {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+}
+.services-list {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-size: 22px;
+    list-style: inherit;
+}
+
+/*--------- преимущества ----------*/
+
+.benefits__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 45px;
+}
+.benefits__row-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 22px;
+}
+.benefits-h2 {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-size: 28px;
+    text-align: center;
+}
+.benefits-text {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+.benefits__row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.benefits-img1 {
+    max-width: 135px;
+    max-height: 126px;
+}
+.benefits-img2 {
+    max-width: 154px;
+    max-height: 125px;
+}
+.benefits-img3 {
+    max-width: 145px;
+    max-height: 131px;
+}
+.benefits-img4 {
+    max-width: 123px;
+    max-height: 134px;
+}
+.benefits-img5 {
+    max-width: 204px;
+    max-height: 125px;
+}
+.benefits-img6 {
+    max-width: 149px;
+    max-height: 129px;
+}
+
+/*--------- примеры работ ----------*/
+
+/*--------- расчет стоимости ----------*/
+
+.cost-calculation__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    padding-top: 100px;
+}
+.cost-calculation__title {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.cost-calculation__calculator {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.cost-calculation__firstColumn {
+    display: flex;
+    flex-direction: column;
+    row-gap: 36px;
+}
+.cost-calculation__secondColumn {
+    display: flex;
+    flex-direction: column;
+    row-gap: 21px;
+}
+.calculator__surfaceView {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+.cost-calculation__radius {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.cost-calculation__thickness {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.cost-calculation__height {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.cost-calculation__length {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.cost-calculation__width {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.cost-calculation__complexity {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+}
+.cost-calculation-h2 {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: center;
+}
+.cost-calculation-h2-p {
+    font-family: Museo-Sans-Cyrl, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}
+.surfaceView-text {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+}
+.surfaceView-type-text {
+    font-family: Museo-Sans-Cyrl, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+.calculator__setting-text {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+}
+.calculator__input {
+    color: rgba(14, 13, 13, 0.58);
+    border-radius: 9px;
+    background: #E1E0DF;
+    font-family: Museo-Sans-Cyrl, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    width: 400px;
+    height: 35px;
+    padding-left: 20px;
+}
+.calculator__input-complexity {
+    color: rgba(14, 13, 13, 0.58);
+    border-radius: 5px;
+    background: #E1E0DF;
+    font-family: Museo-Sans-Cyrl, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    max-width: 68px;
+    max-height: 30px;
+}
+.complexity-menu {
+    color: rgba(14, 13, 13, 0.58);
+    border-radius: 5px;
+    background: #E1E0DF;
+    padding-left: 15px;
+    font-family: Museo-Sans-Cyrl, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    width: 68px;
+    height: 30px;
+
+}
+.cost-calculation__estimate {
+    text-decoration: underline;
+    text-align: center;
+}
+.calculator-button {
+    color: #E1E0DF;
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-size: 22px;
+    transition: all .5s;
+    cursor: url("../img/cursor.png") 4 1, default;
+}
+.calculator-button:hover {
+    text-decoration: underline;
+    color: #956F29;
+}
+select option {
+    line-height: 40px;
+}
