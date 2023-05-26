@@ -4,30 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
 
     <title>Plasma Dynamics</title>
 
+    <link rel="stylesheet" href="libs/flickity/flickity.css">
     <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/select.js" defer></script>
+    <script src="js/card.js" defer></script>
+    <script src="js/slider.js" defer></script>
+    <script src="js/calculator.js" defer></script>
 </head>
 <body>
-    <header class="header">
-        <div class="header__top">
-            <div class="container">
-                <div class="header__top-row">
-                    <div class="header__nav">
-                        <nav class="nav">
-                            <ul class="nav-ul">
-                                <li><a class="nav__link" id="link-first" href="#!">Услуги</a></li>
-                                <li><a class="nav__link" id="link-second" href="#!">Стоимость</a></li>
-                                <li><img src="img/logo.svg" alt="logo"></li>
-                                <li><a class="nav__link" id="link-third" href="#!">Партнеры</a></li>
-                                <li><a class="nav__link" id="link-fourth" href="#!">Контакты</a></li>
-                            </ul>
-                        </nav>
-                    </div>
+    <div class="header__top">
+        <div class="container">
+            <div class="header__top-row">
+                <div class="header__nav">
+                    <nav class="nav">
+                        <ul class="nav-ul">
+                            <li><a class="nav__link" id="link-first" href="#section__services">Услуги</a></li>
+                            <li><a class="nav__link" id="link-second" href="#section__calculator">Стоимость</a></li>
+                            <li><img src="img/logo.svg" alt="logo"></li>
+                            <li><a class="nav__link" id="link-third" href="#section__partners">Партнеры</a></li>
+                            <li><a class="nav__link" id="link-fourth" href="#footer">Контакты</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
+    </div>
+    <header class="header">
         <div class="header__title">
             <div class="container">
                 <div class="header__title-main">
@@ -37,12 +44,12 @@
                         </div>
                         <div class="menu">
                             <a class="menu__link" id="menu-link-first" href="#!">Оставить заявку</a>
-                            <a class="menu__link" id="menu-link-second" href="#!">Расчитать стоимость</a>
+                            <a class="menu__link" id="menu-link-second" href="#section__calculator">Расчитать стоимость</a>
                         </div>
                     </div>
                     <div class="header__info-img">
                         <div class="header__title-info">
-                            <p class="header-info-1">Разработка и производство плазматронов для напыления функциональных покрытий</p>
+                            <p class="header-info-1">Plasma Dynamics - лучшее решение для вас</p>
                         </div>
                         <div class="header__title-logo">
                             <img src="img/cubes-cut.png" alt="cubes">
@@ -53,7 +60,7 @@
                             <img src="img/D-h1.svg" alt="D">
                         </div>
                         <div class="header__info-help">
-                            <p class="header-info-2">Мы поможем вам сэкономить время и деньги на ремонте оборудования!</p>
+                            <p class="header-info-2">Мы увеличим срок эксплуатации вашего оборудования и снизим денежные затраты на его ремонт</p>
                         </div>
                     </div>
                 </div>
@@ -76,7 +83,7 @@
                         <div class="about-company__items-info">
                             <div class="about-company__info-text">
                                 <h2 class="company-name-text">ООО «Плазма Динамика»</h2>
-                                <p class="company-description-text">Наша компания специализируетя на производстве плазматронов для напыления функциональных покрытий. Металлическая отделка способна придать предметам различный блеск. Наша команда способна удовлетворить растущий спорос среди компаний. Мы используем эксклюзивные  методы металлизации, технологии и проверенные решения как в области разработки оборудования, так и в сфере оказания услуг по нанесению функциональных покрытий. Наша основная цель - помочь вам повысить производительность оборудования, увеличить срок службы изделия и придать материалам новый вид.</p>
+                                <p class="company-description-text">Наша компания специализируетя на производстве плазмотронов для напыления функциональных покрытий. Группа технологий получения и обработки материалов с использованием нагрева исходных продуктов в плазменной струе или перевода их в плазменное состояние. Плазменное напыление позволяет увеличить срок эксплуатации деталей, а также восстанавливать изношенное изделие. Данная технология  широко применяется для защиты от высокотемпературного износа, придания коррозионной стойкости, для упрочнения поверхности деталей, работающих при высоких нагрузках.</p>
                             </div>
                         </div>
                         <div class="about-company__items-coatings">
@@ -84,6 +91,15 @@
                                 <img class="img-coatings" src="img/coatings.png" alt="Покрытия">
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section__spraying">
+            <div class="spraying">
+                <div class="container">
+                    <div class="spraying__items">
+
                     </div>
                 </div>
             </div>
@@ -96,39 +112,51 @@
                             <h2 class="coatings-h2">Типы покрытий</h2>
                         </div>
                         <div class="types-coatings__row">
-                            <div class="coating-heat-resistant">
-                                <div class="coating-items">
+                            <div class="coating__items">
+                                <div class="coating__items-img">
                                     <img class="coating-img" src="img/coverage1.png" alt="Жаростойкое покрытие">
+                                </div>
+                                <div class="coating__items-text">
                                     <p class="coating-type-text">Жаростойкие</p>
                                 </div>
                             </div>
-                            <div class="coating-thermal-barrier">
-                                <div class="coating-items">
+                            <div class="coating__items">
+                                <div class="coating__items-img">
                                     <img class="coating-img" src="img/coverage2.png" alt="Термобарьерное покрытие">
+                                </div>
+                                <div class="coating__items-text">
                                     <p class="coating-type-text">Термобарьерные</p>
                                 </div>
                             </div>
-                            <div class="coating-corrosion-resistant">
-                                <div class="coating-items">
+                            <div class="coating__items">
+                                <div class="coating__items-img">
                                     <img class="coating-img" src="img/coverage3.png" alt="Коррозионностойкое покрытие">
+                                </div>
+                                <div class="coating__items-text">
                                     <p class="coating-type-text">Коррозионностойкие</p>
                                 </div>
                             </div>
-                            <div class="coating-electrical-insulation">
-                                <div class="coating-items">
+                            <div class="coating__items">
+                                <div class="coating__items-img">
                                     <img class="coating-img" src="img/coverage4.png" alt="Электроизоляционное покрытие">
+                                </div>
+                                <div class="coating__items-text">
                                     <p class="coating-type-text">Электроизоляционные</p>
                                 </div>
                             </div>
-                            <div class="coating-friction">
-                                <div class="coating-items">
+                            <div class="coating__items">
+                                <div class="coating__items-img">
                                     <img class="coating-img" src="img/coverage5.png" alt="Фрикционное покрытие">
+                                </div>
+                                <div class="coating__items-text">
                                     <p class="coating-type-text">Фрикционные</p>
                                 </div>
                             </div>
-                            <div class="coating-anti-friction">
-                                <div class="coating-items">
+                            <div class="coating__items">
+                                <div class="coating__items-img">
                                     <img class="coating-img" src="img/coverage6.png" alt="Антифрикционное покрытие">
+                                </div>
+                                <div class="coating__items-text">
                                     <p class="coating-type-text">Антифрикционные</p>
                                 </div>
                             </div>
@@ -137,7 +165,81 @@
                 </div>
             </div>
         </section>
-        <section class="section__services">
+        <section class="section__equipment">
+            <div class="equipment">
+                <div class="container">
+                    <div class="equipment__items">
+                        <form class="equipment__form" action="#">
+                            <div class="equipment__title">
+                                <h2 class="equipment-h2">Оборудование для напыления:</h2>
+                            </div>
+                            <div class="equipment__img">
+                                <img src="img/plasmatron-pd25.png" alt="Плазмотрон PD-25" class="plasmatron-img">
+                                <button type='button' onclick="show()" class="plasmatron-info-button">i</button>
+                                <div class="plasmatron__info-card" id="plasmatron-card">
+                                    <div class="card__button-back">
+                                        <button type='button' onclick="back()" class="plasmatron-back-button"></button>
+                                    </div>
+                                    <div class="card__title">
+                                        <h2 class="card-h2">Характеристики</h2>
+                                    </div>
+                                    <div class="card__specifications">
+                                        <ol>
+                                            <li class="card-parameter">Рабочий ток: 70-250 А</li>
+                                            <li class="card-parameter">Рабочее напряжение на плазматроне (при работе на воздухе): 60-100 В</li>
+                                            <li class="card-parameter">Мощность плазмотрона: 25 кВт</li>
+                                            <li class="card-parameter">Режим работы, ПВ:  100%</li>
+                                            <li class="card-parameter">Плазмообразующий газ: Аргон</li>
+                                            <li class="card-parameter">Допускается применение:  Азот/Аргон, Аргон/Водород</li>
+                                            <li class="card-parameter">Транспортирующий газ: Аргон</li>
+                                            <li class="card-parameter">Расход плазмообразующего газа: 40-50 л/мин</li>
+                                            <li class="card-parameter">Расход защитного газа: -</li>
+                                            <li class="card-parameter">Расход транспортирующего газа: 5-10 л/мин</li>
+                                            <li class="card-parameter">Расход воды: 15 л/мин</li>
+                                            <li class="card-parameter">Коэффициент использования порошка: >0,7</li>
+                                            <li class="card-parameter">Масса плазмотрона: <5 кг</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="equipment__type">
+                                <p class="plasmatron-type-info">Плазмотрон PD-25</p>
+                            </div>
+                            <div class="equipment__price">
+                                <p class="plasmatron-price-info">700 тыс.руб</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section__consumables">
+            <div class="consumables">
+                <div class="container">
+                    <div class="consumables__items">
+                        <div class="consumables__title">
+                            <h2 class="consumables-h2">Расходные материалы</h2>
+                        </div>
+                        <div class="consumables__row">
+                            <div class="consumables__item-1">
+                                <div class="item-1__img">
+                                    <img src="img/consumable-1.png" alt="Красивая картинка" class="consumable-1-img">
+                                </div>
+                                <div class="item-1__text">
+                                    <p class="consumable__item-1__text">Сопла для плазмотронов</p>
+                                </div>
+                            </div>
+                            <div class="consumables__item-2">
+                                <div class="item-2__img">
+                                    <img src="img/consumable-2.png" alt="Красивая картинка" class="consumable-2-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section__services" id="section__services">
             <div class="services">
                 <div class="container">
                     <div class="services__items">
@@ -148,7 +250,7 @@
                             <ul class="services-list-ul">
                                 <li class="services-list">Ремонт и восстановление изношенных поверхностей</li>
                                 <li class="services-list">Услуги по наплавке покрытий</li>
-                                <li class="services-list">Разработка, сборка, продажа, ремонт и обслуживание плазматронов</li>
+                                <li class="services-list">Разработка, сборка, продажа, ремонт и обслуживание плазмотронов</li>
                                 <li class="services-list">Производство расходников для плазматронов</li>
                             </ul>
                         </div>
@@ -170,7 +272,7 @@
                                         <img class="benefits-img1" src="img/benefit-1.png" alt="Специализированное ПО">
                                     </div>
                                     <div class="benefits__row-text">
-                                        <p class="benefits-text">Специализированное <br>ПО</p>
+                                        <p class="benefits-text">Квалифицированная <br>команда</p>
                                     </div>
                                 </div>
                             </div>
@@ -180,7 +282,7 @@
                                         <img class="benefits-img2" src="img/benefit-2.png" alt="Специализированное ПО">
                                     </div>
                                     <div class="benefits__row-text">
-                                        <p class="benefits-text">Выгодная <br>цена</p>
+                                        <p class="benefits-text">Быстрая <br>работа</p>
                                     </div>
                                 </div>
                             </div>
@@ -190,7 +292,7 @@
                                         <img class="benefits-img3" src="img/benefit-3.png" alt="Специализированное ПО">
                                     </div>
                                     <div class="benefits__row-text">
-                                        <p class="benefits-text">Квалифицированная <br>команда</p>
+                                        <p class="benefits-text">Качественные <br>материалы и гарантия</p>
                                     </div>
                                 </div>
                             </div>
@@ -200,27 +302,7 @@
                                         <img class="benefits-img4" src="img/benefit-4.png" alt="Специализированное ПО">
                                     </div>
                                     <div class="benefits__row-text">
-                                        <p class="benefits-text">Быстрый <br>ремонт</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="benefits__row-5">
-                                <div class="benefits__row-items">
-                                    <div class="benefits__row-img">
-                                        <img class="benefits-img5" src="img/benefit-5.png" alt="Специализированное ПО">
-                                    </div>
-                                    <div class="benefits__row-text">
-                                        <p class="benefits-text">Оперативная <br>доставка</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="benefits__row-6">
-                                <div class="benefits__row-items">
-                                    <div class="benefits__row-img">
-                                        <img class="benefits-img6" src="img/benefit-6.png" alt="Специализированное ПО">
-                                    </div>
-                                    <div class="benefits__row-text">
-                                        <p class="benefits-text">Гарантия <br>качества</p>
+                                        <p class="benefits-text">Высокое качество</p>
                                     </div>
                                 </div>
                             </div>
@@ -229,7 +311,32 @@
                 </div>
             </div>
         </section>
-        <section class="section__cost-calculation">
+        <section class="section__examples">
+            <div class="examples">
+                <div class="container">
+                    <div class="examples__items">
+                        <div class="examples__title">
+                            <h2 class="examples-h2">Примеры работ</h2>
+                        </div>
+                        <div class="main-carousel" data-flickity='{ "wrapAround": true, "pageDots": false, "setGallerySize": false }'>
+                            <div class="carousel-cell">
+                                <img src="img/example1.png"/>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="img/example1.png"/>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="img/example1.png"/>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="img/example1.png"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section__cost-calculation" id="section__calculator">
             <div class="cost-calculation">
                 <div class="container">
                     <div class="cost-calculation__items">
@@ -241,106 +348,266 @@
                                 <p class="cost-calculation-h2-p">*расчет стоимости нанесения напыления производится без учета расходных материалов</p>
                             </div>
                         </div>
-                        <div class="cost-calculation__calculator">
-                            <div class="cost-calculation__firstColumn">
-                                <div class="calculator__surfaceView">
-                                    <div class="calculator__surfaceView-text">
-                                        <p class="surfaceView-text">Вид поверхности:</p>
+                        <form class="cart" id="cart_custom">
+                            <div class="cost-calculation__calculator">
+                                <div class="cost-calculation__firstColumn">
+                                    <div class="calculator__surfaceView">
+                                        <div class="calculator__surfaceView-text">
+                                            <p class="surfaceView-text">Вид поверхности:</p>
+                                        </div>
+                                        <div class="calculator__surfaceView-form">
+                                            <div class="surfaceView-form__circle">
+                                                <input type="radio" id="circle" name="figure">
+                                                <label class="surfaceView-type-text" for="circle">Круг</label>
+                                            </div>
+                                            <div class="surfaceView-form__rectangle">
+                                                <input type="radio" id="rectangle" name="figure">
+                                                <label class="surfaceView-type-text" for="rectangle">Прямоугольник</label>
+                                            </div>
+                                            <div class="surfaceView-form__cylinder">
+                                                <input type="radio" id="cylinder" name="figure">
+                                                <label class="surfaceView-type-text" for="cylinder">Цилиндр</label>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="calculator__surfaceView-form">
-                                        <div class="surfaceView-form__circle">
-                                            <input type="radio" id="circle" name="figure">
-                                            <label class="surfaceView-type-text" for="circle">Круг</label>
+                                    <div class="calculator__details">
+                                        <div class="cost-calculation__details-text">
+                                            <p class="calculator__setting-text">Количество деталей:</p>
                                         </div>
-                                        <div class="surfaceView-form__rectangle">
-                                            <input type="radio" id="rectangle" name="figure">
-                                            <label class="surfaceView-type-text" for="rectangle">Прямоугольник</label>
-                                        </div>
-                                        <div class="surfaceView-form__cylinder">
-                                            <input type="radio" id="cylinder" name="figure">
-                                            <label class="surfaceView-type-text" for="cylinder">Цилиндр</label>
+                                        <div class="cost-calculation__details-form">
+                                            <label for="details"></label>
+                                            <input class="calculator__input" type="number" name="details" id="details" min="0" size="3" step="1" placeholder="0">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="calculator__details">
-                                    <div class="cost-calculation__details-text">
-                                        <p class="calculator__setting-text">Количество деталей:</p>
+                                <div class="cost-calculation__secondColumn">
+                                    <div class="cost-calculation__radius" id="setting1">
+                                        <div class="cost-calculation__radius-text">
+                                            <p class="calculator__setting-text">Радиус:</p>
+                                        </div>
+                                        <div class="cost-calculation__radius-form">
+                                            <label for="radius"></label>
+                                            <input class="calculator__input" type="number" name="radius" id="radius" min="0" max="500" size="3" step="any" placeholder="в мм">
+                                        </div>
                                     </div>
-                                    <div class="cost-calculation__details-form">
-                                        <label for="details"></label>
-                                        <input class="calculator__input" type="number" name="details" id="details" min="0" size="3" step="1" placeholder="0">
+                                    <div class="cost-calculation__thickness">
+                                        <div class="cost-calculation__thickness-text">
+                                            <p class="calculator__setting-text">Толщина покрытия:</p>
+                                        </div>
+                                        <div class="cost-calculation__thickness-form">
+                                            <label for="thickness"></label>
+                                            <input class="calculator__input" type="number" name="thickness" id="thickness" min="0" size="3" step="any" placeholder="от 0.1 мм до 5 мм">
+                                        </div>
+                                    </div>
+                                    <div class="cost-calculation__height" id="setting2">
+                                        <div class="cost-calculation__height-text">
+                                            <p class="calculator__setting-text">Высота:</p>
+                                        </div>
+                                        <div class="cost-calculation__height-form">
+                                            <label for="height"></label>
+                                            <input class="calculator__input" type="number" name="height" id="height" min="0" size="3" step="any" placeholder="в мм">
+                                        </div>
+                                    </div>
+                                    <div class="cost-calculation__length" id="setting3">
+                                        <div class="cost-calculation__length-text">
+                                            <p class="calculator__setting-text">Длина:</p>
+                                        </div>
+                                        <div class="cost-calculation__length-form">
+                                            <label for="length"></label>
+                                            <input class="calculator__input" type="number" name="length" id="length" min="0" size="3" step="any" placeholder="в мм">
+                                        </div>
+                                    </div>
+                                    <div class="cost-calculation__width" id="setting4">
+                                        <div class="cost-calculation__width-text">
+                                            <p class="calculator__setting-text">Ширина:</p>
+                                        </div>
+                                        <div class="cost-calculation__width-form">
+                                            <label for="width"></label>
+                                            <input class="calculator__input" type="number" name="width" id="width" min="0" size="3" step="any" placeholder="в мм">
+                                        </div>
+                                    </div>
+                                    <div class="cost-calculation__complexity">
+                                        <div class="cost-calculation__complexity-text">
+                                            <p class="calculator__setting-text">Сложность геометрии детали:</p>
+                                        </div>
+                                        <div class="select-box">
+                                            <div class="options-container" id="id_state">
+                                                <div class="option">
+                                                    <label for="complexity-1">1</label>
+                                                    <input type="radio" class="radio" value="1" id="complexity-1" name="complexity"/>
+                                                </div>
+
+                                                <div class="option">
+                                                    <label for="complexity-1.5">1.5</label>
+                                                    <input type="radio" class="radio" value="1.5" id="complexity-1.5" name="complexity"/>
+                                                </div>
+                                                <div class="option">
+                                                    <label for="complexity-2">2</label>
+                                                    <input type="radio" class="radio" value="2" id="complexity-2" name="complexity"/>
+                                                </div>
+                                            </div>
+                                            <div class="selected" id="selected-info">
+                                                1
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="cost-calculation__secondColumn">
-                                <div class="cost-calculation__radius">
-                                    <div class="cost-calculation__radius-text">
-                                        <p class="calculator__setting-text">Радиус:</p>
-                                    </div>
-                                    <div class="cost-calculation__radius-form">
-                                        <label for="radius"></label>
-                                        <input class="calculator__input" type="number" name="radius" id="radius" min="0" max="500" size="3" step="any" placeholder="в мм">
-                                    </div>
+                            <div class="cost-calculation__estimate">
+                                <p> <label for="btn_estimate"></label><br>
+                                    <input class="calculator-button" type="submit" value="Рассчитать стоимость" id="btn_estimate">
+                                    <input id="total_estimate" disabled="true" type="text" name="total" size="0" style="display: none;">
+                                </p>
+                            </div>
+                                <p class="cost-info">Приблизительная стоимость: <span id="cost-info"></span></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section__partners" id="section__partners">
+            <div class="partners">
+                <div class="container">
+                    <div class="partners__items">
+                        <div class="partners__title">
+                            <h2 class="partners-h2">Партнеры</h2>
+                        </div>
+                        <div class="partners__row">
+                            <div class="partners__row-atomstroicomplex">
+                                <img class="partners-img-1" src="img/partner-1.png" alt="Атомстройкомплекс">
+                            </div>
+                            <div class="partners__row-uralmash">
+                                <img class="partners-img-2" src="img/partner-2.png" alt="Уралмаш" id="partner-mid">
+                            </div>
+                            <div class="partners__row-mashprom">
+                                <img class="partners-img-3" src="img/partner-3.png" alt="Машпром">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section__team">
+            <div class="team">
+                <div class="container">
+                    <div class="team__items">
+                        <div class="team__title">
+                            <h2 class="team-h2">Наша команда</h2>
+                        </div>
+                        <div class="team__row">
+                            <div class="team__row-worker">
+                                <div class="worker-photo">
+                                    <img src="img/worker-1.png" alt="Куклин Илья" class="worker-photo-1">
                                 </div>
-                                <div class="cost-calculation__thickness">
-                                    <div class="cost-calculation__thickness-text">
-                                        <p class="calculator__setting-text">Толщина покрытия:</p>
-                                    </div>
-                                    <div class="cost-calculation__thickness-form">
-                                        <label for="thickness"></label>
-                                        <input class="calculator__input" type="number" name="thickness" id="thickness" min="0" size="3" step="any" placeholder="от 0.1 мм до 5 мм">
-                                    </div>
+                                <div class="worker-name">
+                                    <p class="worker-name-text">Куклин Илья</p>
                                 </div>
-                                <div class="cost-calculation__height">
-                                    <div class="cost-calculation__height-text">
-                                        <p class="calculator__setting-text">Высота:</p>
-                                    </div>
-                                    <div class="cost-calculation__height-form">
-                                        <label for="height"></label>
-                                        <input class="calculator__input" type="number" name="height" id="height" min="0" size="3" step="any" placeholder="в мм">
-                                    </div>
+                                <div class="worker-post">
+                                    <p class="worker-post-text">Генеральный директор,<br>маркетинг, PR, GR</p>
                                 </div>
-                                <div class="cost-calculation__length">
-                                    <div class="cost-calculation__length-text">
-                                        <p class="calculator__setting-text">Длина:</p>
-                                    </div>
-                                    <div class="cost-calculation__length-form">
-                                        <label for="length"></label>
-                                        <input class="calculator__input" type="number" name="length" id="length" min="0" size="3" step="any" placeholder="в мм">
-                                    </div>
+                            </div>
+                            <div class="team__row-worker">
+                                <div class="worker-photo">
+                                    <img src="img/worker-2.png" alt="Куклин Илья" class="worker-photo-1">
                                 </div>
-                                <div class="cost-calculation__width">
-                                    <div class="cost-calculation__width-text">
-                                        <p class="calculator__setting-text">Ширина:</p>
-                                    </div>
-                                    <div class="cost-calculation__width-form">
-                                        <label for="width"></label>
-                                        <input class="calculator__input" type="number" name="width" id="width" min="0" size="3" step="any" placeholder="в мм">
-                                    </div>
+                                <div class="worker-name">
+                                    <p class="worker-name-text">Барашев Николай</p>
                                 </div>
-                                <div class="cost-calculation__complexity">
-                                    <div class="cost-calculation__complexity-text">
-                                        <p class="calculator__setting-text">Сложность геометрии детали:</p>
-                                    </div>
-                                    <div class="cost-calculation__complexity-form">
-                                        <label for="complexity"></label>
-                                        <select class="complexity-menu" id="complexity" name="state" required>
-                                            <option value="1">1</option>
-                                            <option value="1.5">1.5</option>
-                                            <option value="2">2</option>
-                                        </select>
-                                    </div>
+                                <div class="worker-post">
+                                    <p class="worker-post-text">Разработка<br> и модернизация продукта</p>
+                                </div>
+                            </div>
+                            <div class="team__row-worker">
+                                <div class="worker-photo">
+                                    <img src="img/worker-3.png" alt="Куклин Илья" class="worker-photo-1">
+                                </div>
+                                <div class="worker-name">
+                                    <p class="worker-name-text">Алексей Идиятулин</p>
+                                </div>
+                                <div class="worker-post">
+                                    <p class="worker-post-text">Управление финансами, привлечение <br>инвестиций, отчетность</p>
+                                </div>
+                            </div>
+                            <div class="team__row-worker">
+                                <div class="worker-photo">
+                                    <img src="img/worker-4.png" alt="Куклин Илья" class="worker-photo-1">
+                                </div>
+                                <div class="worker-name">
+                                    <p class="worker-name-text">Ривхат Валиев</p>
+                                </div>
+                                <div class="worker-post">
+                                    <p class="worker-post-text">R&D, патентование</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="cost-calculation__estimate">
-                            <a href="#!" class="calculator-button">Расчитать стоимость</a>
-                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section__request">
+            <div class="request">
+                <div class="container">
+                    <div class="request__items">
+                        <form class="request__form" action="#">
+                            <div class="request__title">
+                                <h2 class="request-h2">Оставьте заявку для консультации</h2>
+                            </div>
+                            <div class="request__name">
+                                <label>
+                                    <textarea class="request-input" type="text" placeholder="Введите ФИО"></textarea>
+                                </label>
+                            </div>
+                            <div class="request__phoneNumber">
+                                <label>
+                                    <textarea class="request-input" type="text" placeholder="Введите номер телефона"></textarea>
+                                </label>
+                            </div>
+                            <div class="request__question">
+                                <label>
+                                    <textarea class="request-input-question" type="text" placeholder="Объясните в чем проблема"></textarea>
+                                </label>
+                            </div>
+                            <div class="request__sending">
+                                <a class="request-sending-text" href="#!" spellcheck="false">Отправить</a>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <script src="libs/flickity/flickity.pkgd.js"></script>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__items">
+                <div class="footer__title">
+                    <h2 class="footer-h2">Контакты</h2>
+                </div>
+                <div class="footer__main">
+                    <div class="footer__map">
+                        <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1297.3870026015752!2d60.65490877395353!3d56.84703890762092!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16c3194d14955%3A0xacb0b5dc321c558b!2z0YPQuy4g0J_QtdGA0LLQvtC80LDQudGB0LrQsNGPLCA5MSwg0JXQutCw0YLQtdGA0LjQvdCx0YPRgNCzLCDQodCy0LXRgNC00LvQvtCy0YHQutCw0Y8g0L7QsdC7Liwg0KDQvtGB0YHQuNGPLCA2MjAwNDk!5e0!3m2!1sru!2sus!4v1684999093433!5m2!1sru!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="footer__info">
+                        <div class="footer__info-option">
+                            <div class="footer__info-address">
+                                <p><span class="footer-head">Адрес:</span><span class="footer-text">620049, Свердловская область, г. Екатеринбург,<br>ул. Первомайская, 91</span></p>
+                            </div>
+                        </div>
+                        <div class="footer__info-option">
+                            <div class="footer__info-phoneNumber">
+                                <p><span class="footer-head">Телефон:</span><span class="footer-text">+7-992-014-38-77</span></p>
+                            </div>
+                        </div>
+                        <div class="footer__info-option">
+                            <div class="footer__info-mail">
+                                <p><span class="footer-head">Почта:</span><span class="footer-text">plasmadynamics@yandex.ru</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

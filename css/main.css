@@ -29,7 +29,7 @@ body {
     background: #0E0D0D;
     position: sticky;
     top: 0;
-    padding-top: 23px;
+    padding-top: 13px;
     z-index: 2;
 }
 .nav-ul {
@@ -68,7 +68,7 @@ body {
 .header__title-main {
     display: flex;
     justify-content: space-between;
-    padding-top: 27px;
+    padding-top: 37px;
 }
 .header__P-menu {
     display: flex;
@@ -112,8 +112,8 @@ body {
 }
 .header-info-2 {
     font-family: Museo-Sans-Cyrl, sans-serif;
-    font-size: 17px;
-    max-width: 341px;
+    font-size: 15px;
+    max-width: 292px;
     text-align: right;
     font-weight: 400;
     line-height: 20px;
@@ -140,6 +140,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     padding-top: 267px;
+    padding-bottom: 290px;
 }
 .about-company__info-text {
     display: flex;
@@ -156,7 +157,7 @@ body {
 .company-description-text {
     font-family: Museo-Sans-Cyrl, sans-serif;
     font-size: 19px;
-    max-width: 507px;
+    max-width: 486px;
     line-height: 23px;
     text-align: justify;
 }
@@ -166,17 +167,27 @@ body {
 
 /*--------- напыление ----------*/
 
+.spraying {
+    height: 659px;
+    background-image: url("/img/background-block-spraying.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 /*--------- типы покрытий ----------*/
 
 .types-coatings__items {
     display: flex;
     flex-direction: column;
     row-gap: 60px;
+    padding-top: 187px;
+    padding-bottom: 86px;
 }
-.coating-items {
+.coating__items {
     display: flex;
     flex-direction: column;
     row-gap: 15px;
+    align-items: center;
 }
 .coatings-h2 {
     font-family: Disket-Mono-Regular, sans-serif;
@@ -199,21 +210,221 @@ body {
 }
 
 /*--------- оборудование для напыления ----------*/
-
-/*--------- расходные материалы ----------*/
-
-/*--------- наши услуги ----------*/
-
-.services__items {
-    display: flex;
-    flex-direction: column;
-    row-gap: 45px;
+.equipment {
+    height: 882px;
+    background-image: url("/img/background-block-plasmatron.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
-.services-list-ul {
+.equipment__items {
+    display: flex;
+    justify-content: center;
+    padding-top: 57px;
+}
+.equipment__title {
+    padding-top: 59px;
+}
+.equipment__img {
+    padding-top: 38px;
+    position: relative;
+}
+.plasmatron-info-button {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    background: #0E0D0D;
+    border-radius: 8px;
+    top: 56px;
+    right: 20px;
+    font-family: Museo-Sans-Cyrl, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    transition: all .5s;
+    cursor: url("../img/cursor.png") 4 1, default;
+
+    text-align: center;
+}
+.plasmatron-info-button:hover {
+    background: #956F29;
+}
+.plasmatron-back-button {
+    background-image: url("/img/button-back.png");
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 26px;
+    transition: all .5s;
+    cursor: url("../img/cursor.png") 4 1, default;
+}
+.plasmatron-back-button:hover {
+    background-image: url("/img/button-back-hover.png");
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 26px;
+}
+.equipment__form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: rgba(225, 224, 223, 0.48);
+    box-shadow: 10px 12px 15px #222222;
+    backdrop-filter: blur(15px);
+    width: 743px;
+    height: 739px;
+    border-radius: 27px;
+}
+.equipment-h2 {
+    color: #0E0D0D;
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+}
+.plasmatron-type-info {
+    color: #0E0D0D;
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    padding-top: 28px;
+}
+.plasmatron-price-info {
+    color: #0E0D0D;
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 28px;
+    padding-top: 3px;
+}
+.plasmatron-img {
+    filter: drop-shadow(8px 10px 13px rgba(0, 0, 0, 0.29));
+    border-radius: 22px;
+}
+.plasmatron__info-card {
+    display: none;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    background: #0E0D0D;
+    border-radius: 22px;
+    width: 438px;
+    height: 473px;
+}
+.card-h2 {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    text-align: center;
+    padding-top: 74px;
+}
+.card__specifications {
+    padding-top: 37px;
+    padding-left: 30px;
+    max-width: 336px;
+    max-height: 270px;
+}
+.card-parameter {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+}
+.card__button-back {
+    position: absolute;
+    top: 25px;
+    left: 27px;
+}
+
+/*--------- расходные материалы ----------*/
+.consumables {
+    padding-top: 160px;
+    padding-bottom: 190px;
+}
+.example1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.example2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+.consumables__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 130px;
+}
+.consumables__row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.consumables-h2 {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+}
+.consumable-1-img {
+    box-shadow: 0 0 49px 10px rgba(225, 224, 223, 0.25);
+    border-radius: 21px;
+}
+.consumable-2-img {
+    box-shadow: 0 0 49px 10px rgba(225, 224, 223, 0.25);
+    border-radius: 19px;
+}
+.consumables__item-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.consumable__item-1__text {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 27px;
+    padding-top: 48px;
+}
+
+/*--------- наши услуги ----------*/
+.services {
+    height: 997px;
+    background-image: url("/img/background-block-services.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.services__items {
+    padding-top: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 45px;
+}
+.services-list-ul {
     list-style: inherit;
+}
+li::marker {
+
+    font-size: 10px;
 }
 .services-title {
     font-family: Disket-Mono-Regular, sans-serif;
@@ -228,10 +439,16 @@ body {
     font-size: 22px;
     list-style: inherit;
 }
+.services__info-description {
+    margin-left: 70px;
+    max-width: 803px;
+    max-height: 125px;
+}
 
 /*--------- преимущества ----------*/
 
 .benefits__items {
+    padding-top: 150px;
     display: flex;
     flex-direction: column;
     row-gap: 45px;
@@ -254,7 +471,8 @@ body {
 }
 .benefits__row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
 }
 .benefits-img1 {
@@ -273,24 +491,75 @@ body {
     max-width: 123px;
     max-height: 134px;
 }
-.benefits-img5 {
-    max-width: 204px;
-    max-height: 125px;
-}
-.benefits-img6 {
-    max-width: 149px;
-    max-height: 129px;
-}
 
 /*--------- примеры работ ----------*/
+
+.examples__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 46px;
+    padding-top: 136px;
+}
+.examples-h2 {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+}
+.carousel-cell {
+    margin-right: 190px;
+    overflow: hidden;
+}
+.carousel-cell img {
+    display: block;
+    height: 200px;
+}
+@media screen and ( min-width: 768px ) {
+    .carousel-cell img {
+        height: 400px;
+    }
+}
+.main-carousel {
+    display: flex;
+    width: 1050px;
+}
+.main-carousel.flickity-enabled {
+    display: block;
+}
+.flickity-prev-next-button {
+    width: 64px;
+    height: 81px;
+    border-radius: 5px;
+    background: none;
+}
+.flickity-prev-next-button:hover {
+    cursor: url("../img/cursor.png") 4 1, default;
+    background: none;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+    fill: #6D523D;
+}
+.flickity-prev-next-button.no-svg {
+}
+/* position outside */
+.flickity-prev-next-button.previous {
+    left: 230px;
+}
+.flickity-prev-next-button.next {
+    right: 230px;
+}
 
 /*--------- расчет стоимости ----------*/
 
 .cost-calculation__items {
     display: flex;
     flex-direction: column;
-    row-gap: 50px;
-    padding-top: 100px;
+    row-gap: 45px;
+    padding-top: 300px;
 }
 .cost-calculation__title {
     display: flex;
@@ -345,7 +614,23 @@ body {
 .cost-calculation__complexity {
     display: flex;
     column-gap: 8px;
-    align-items: center;
+    align-items: baseline;
+}
+.total_estimate {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+}
+.cost-info {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    padding-top: 46px;
 }
 .cost-calculation-h2 {
     font-family: Disket-Mono-Regular, sans-serif;
@@ -377,6 +662,9 @@ body {
     font-size: 20px;
     line-height: 24px;
 }
+.surfaceView-form__circle {
+
+}
 .calculator__setting-text {
     font-family: Disket-Mono-Regular, sans-serif;
     font-style: normal;
@@ -396,6 +684,7 @@ body {
     width: 400px;
     height: 35px;
     padding-left: 20px;
+    color: #0E0D0D;
 }
 .calculator__input-complexity {
     color: rgba(14, 13, 13, 0.58);
@@ -409,23 +698,96 @@ body {
     max-width: 68px;
     max-height: 30px;
 }
-.complexity-menu {
-    color: rgba(14, 13, 13, 0.58);
-    border-radius: 5px;
+
+.select-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.select-box .options-container {
     background: #E1E0DF;
-    padding-left: 15px;
+    color: rgba(14, 13, 13, 0.58);
     font-family: Museo-Sans-Cyrl, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 18px;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 5px;
+    overflow: hidden;
+
+    order: 1;
+}
+
+.selected {
+    background: #E1E0DF;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: rgba(14, 13, 13, 0.58);
+    font-family: Museo-Sans-Cyrl, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    position: relative;
+    padding-top: 7px;
+
+    order: 0;
+}
+
+.selected::after {
+    content: "";
+    background: url("/img/arrow.svg");
+    background-repeat: no-repeat;
+
+    position: absolute;
+    width: 16px;
+    top: 12px;
+    right: 10px;
+    height: 9px;
+
+    transition: all 0.4s;
+}
+
+.select-box .options-container.active {
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: hidden;
+}
+
+.select-box .options-container.active + .selected::after {
+    transform: rotateX(180deg);
+}
+
+.select-box .option,
+.selected {
+    padding-top: 7px;
+    padding-left: 14px;
     width: 68px;
     height: 30px;
+    cursor: pointer;
+    color: #0E0D0D;
+}
 
+.select-box .option:hover {
+    color: #0E0D0D;
+    background: rgba(14, 13, 13, 0.2);
+}
+
+.select-box label {
+    cursor: pointer;
+}
+
+.select-box .option .radio {
+    display: none;
 }
 .cost-calculation__estimate {
     text-decoration: underline;
     text-align: center;
+    padding-top: 52px;
 }
 .calculator-button {
     color: #E1E0DF;
@@ -433,11 +795,266 @@ body {
     font-size: 22px;
     transition: all .5s;
     cursor: url("../img/cursor.png") 4 1, default;
+    text-decoration: underline;
 }
 .calculator-button:hover {
     text-decoration: underline;
     color: #956F29;
 }
-select option {
-    line-height: 40px;
+#setting1 {
+    display: none;
+}
+#setting2 {
+    display: none;
+}
+#setting3 {
+    display: none;
+}
+#setting4 {
+    display: none;
+}
+
+/*--------- партнеры ----------*/
+
+.partners__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 86px;
+    padding-top: 166px;
+}
+.partners-h2 {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+}
+.partners__row {
+    display: flex;
+    padding-left: 60px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.partners__row-uralmash {
+    display: flex;
+}
+.partners-img-1 {
+    max-width: 228px;
+    max-height: 58px;
+}
+.partners-img-2 {
+    max-width: 170px;
+    max-height: 99px;
+}
+.partners-img-3 {
+    max-width: 300px;
+    max-height: 62px;
+}
+
+/*--------- наша команда ----------*/
+
+.team__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 58px;
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+.team-h2 {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+}
+.team__row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.team__row-worker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.worker-name-text {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 19px;
+    text-align: center;
+    padding-top: 21px;
+}
+.worker-post-text {
+    font-family: Museo-Sans-Cyrl, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    padding-top: 3px;
+}
+/*--------- заявка для консультации ----------*/
+.request__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.request__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url("/img/form-request.png");
+    width: 1155px;
+    height: 629px;
+    border-radius: 44px;
+}
+.request-h2 {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+    padding-top: 84px;
+}
+.request__name {
+    width: 922px;
+    height: 66px;
+    background: rgba(225, 224, 223, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 21px;
+    margin-top: 43px;
+}
+.request__phoneNumber {
+    width: 922px;
+    height: 66px;
+    background: rgba(225, 224, 223, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 21px;
+    margin-top: 39px;
+}
+.request__question {
+    width: 922px;
+    height: 118px;
+    background: rgba(225, 224, 223, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 21px;
+    margin-top: 44px;
+}
+.request__sending {
+    padding-top: 44px;
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-size: 25px;
+    text-decoration: underline;
+    text-align: center;
+}
+.request-sending-text {
+    color: #E1E0DF;
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-size: 25px;
+    transition: all .5s;
+    cursor: url("../img/cursor.png") 4 1, default;
+    text-decoration: underline;
+}
+.request-sending-text:hover {
+    color: #956F29;
+    text-decoration: underline;
+}
+.request-input {
+    overflow-y: hidden;
+    font-family: Museo-Sans-Cyrl, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #E1E0DF;
+    padding-left: 29px;
+    padding-top: 22px;
+    padding-bottom: 21px;
+    width: 900px;
+    height: 60px;
+}
+.request-input-question {
+    font-family: Museo-Sans-Cyrl, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #E1E0DF;
+    padding-left: 29px;
+    padding-top: 17px;
+    padding-bottom: 21px;
+    width: 900px;
+    height: 100px;
+}
+.request-input::placeholder {
+    color: rgba(225, 224, 223, 0.68);
+}
+.request-input-question::placeholder {
+    color: rgba(225, 224, 223, 0.68);
+}
+textarea {
+    border-width: none;
+    outline: none;
+    resize: none;
+}
+
+/*-------- footer ---------*/
+
+/*--------- контакты ----------*/
+
+.footer__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 45px;
+    padding-top: 106px;
+}
+.footer__main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    max-width: 605px;
+}
+.footer__info-option {
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-h2 {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+}
+.footer-head {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+}
+.footer-text {
+    font-family: Museo-Sans-Cyrl, sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 24px;
+    padding-left: 21px;
+}
+.map-frame {
+    max-width: 100%;
+    min-height: 100%;
+    width: 567px;
+    height: 296px;
 }
