@@ -79,14 +79,14 @@ body {
     display: flex;
     flex-direction: column;
     row-gap: 9px;
-    width: 265px;
+    width: 279px;
     text-decoration: underline;
 }
 #menu-link-first {
     max-width: 210px;
 }
 #menu-link-second {
-    max-width: 265px;
+    max-width: 279px;
 }
 .menu__link {
     color: #E1E0DF;
@@ -169,7 +169,7 @@ body {
 
 .spraying {
     height: 659px;
-    background-image: url("/img/background-block-spraying.png");
+    background-image: url("../img/background-block-spraying.png");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -212,7 +212,7 @@ body {
 /*--------- оборудование для напыления ----------*/
 .equipment {
     height: 882px;
-    background-image: url("/img/background-block-plasmatron.png");
+    background-image: url("../img/background-block-plasmatron.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -251,7 +251,7 @@ body {
     background: #956F29;
 }
 .plasmatron-back-button {
-    background-image: url("/img/button-back.png");
+    background-image: url("../img/button-back.png");
     background-repeat: no-repeat;
     width: 26px;
     height: 26px;
@@ -259,7 +259,7 @@ body {
     cursor: url("../img/cursor.png") 4 1, default;
 }
 .plasmatron-back-button:hover {
-    background-image: url("/img/button-back-hover.png");
+    background-image: url("../img/button-back-hover.png");
     background-repeat: no-repeat;
     width: 26px;
     height: 26px;
@@ -407,7 +407,7 @@ body {
 /*--------- наши услуги ----------*/
 .services {
     height: 997px;
-    background-image: url("/img/background-block-services.png");
+    background-image: url("../img/background-block-services.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -740,9 +740,7 @@ li::marker {
 
 .selected::after {
     content: "";
-    background: url("/img/arrow.svg");
-    background-repeat: no-repeat;
-
+    background: url("../img/arrow.svg") no-repeat;
     position: absolute;
     width: 16px;
     top: 12px;
@@ -768,8 +766,8 @@ li::marker {
     padding-left: 14px;
     width: 68px;
     height: 30px;
-    cursor: pointer;
     color: #0E0D0D;
+    cursor: url("../img/cursor.png") 4 1, default;
 }
 
 .select-box .option:hover {
@@ -799,6 +797,7 @@ li::marker {
 }
 .calculator-button:hover {
     text-decoration: underline;
+    cursor: url("../img/cursor.png") 4 1, default;
     color: #956F29;
 }
 #setting1 {
@@ -812,6 +811,10 @@ li::marker {
 }
 #setting4 {
     display: none;
+}
+.label-complexity {
+    display: block;
+    width: 100%;
 }
 
 /*--------- партнеры ----------*/
@@ -908,7 +911,7 @@ li::marker {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url("/img/form-request.png");
+    background: url("../img/form-request.png");
     width: 1155px;
     height: 629px;
     border-radius: 44px;
@@ -952,6 +955,7 @@ li::marker {
     font-size: 25px;
     text-decoration: underline;
     text-align: center;
+    cursor: url("../img/cursor.png") 4 1, default;
 }
 .request-sending-text {
     color: #E1E0DF;

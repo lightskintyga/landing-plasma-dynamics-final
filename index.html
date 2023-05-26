@@ -11,17 +11,19 @@
     <link rel="stylesheet" href="libs/flickity/flickity.css">
     <link rel="stylesheet" href="css/main.css">
 
+    <script src="libs/jquery-3.7.0.min.js" defer></script>
+    <script src="js/calculator.js" defer></script>
     <script src="js/select.js" defer></script>
     <script src="js/card.js" defer></script>
     <script src="js/slider.js" defer></script>
-    <script src="js/calculator.js" defer></script>
+    <script src="js/animation__nav.js" defer></script>
 </head>
 <body>
     <div class="header__top">
         <div class="container">
             <div class="header__top-row">
                 <div class="header__nav">
-                    <nav class="nav">
+                    <nav class="nav" id="menu">
                         <ul class="nav-ul">
                             <li><a class="nav__link" id="link-first" href="#section__services">Услуги</a></li>
                             <li><a class="nav__link" id="link-second" href="#section__calculator">Стоимость</a></li>
@@ -42,9 +44,9 @@
                         <div class="header__P">
                             <img class="header__P-img" src="img/P-h1.svg" alt="P">
                         </div>
-                        <div class="menu">
-                            <a class="menu__link" id="menu-link-first" href="#!">Оставить заявку</a>
-                            <a class="menu__link" id="menu-link-second" href="#section__calculator">Расчитать стоимость</a>
+                        <div class="menu" id="menu__sub">
+                            <a class="menu__link" id="menu-link-first" href="#section__request">Оставить заявку</a>
+                            <a class="menu__link" id="menu-link-second" href="#section__calculator">Расcчитать стоимость</a>
                         </div>
                     </div>
                     <div class="header__info-img">
@@ -433,16 +435,16 @@
                                         <div class="select-box">
                                             <div class="options-container" id="id_state">
                                                 <div class="option">
-                                                    <label for="complexity-1">1</label>
+                                                    <label class="label-complexity" for="complexity-1">1</label>
                                                     <input type="radio" class="radio" value="1" id="complexity-1" name="complexity"/>
                                                 </div>
 
                                                 <div class="option">
-                                                    <label for="complexity-1.5">1.5</label>
+                                                    <label class="label-complexity" for="complexity-1.5">1.5</label>
                                                     <input type="radio" class="radio" value="1.5" id="complexity-1.5" name="complexity"/>
                                                 </div>
                                                 <div class="option">
-                                                    <label for="complexity-2">2</label>
+                                                    <label class="label-complexity" for="complexity-2">2</label>
                                                     <input type="radio" class="radio" value="2" id="complexity-2" name="complexity"/>
                                                 </div>
                                             </div>
@@ -544,7 +546,7 @@
                 </div>
             </div>
         </section>
-        <section class="section__request">
+        <section class="section__request" id="section__request">
             <div class="request">
                 <div class="container">
                     <div class="request__items">
