@@ -167,11 +167,8 @@ body {
 
 /*--------- напыление ----------*/
 
-.spraying {
-    height: 659px;
-    background-image: url("../img/background-block-spraying.png");
-    background-repeat: no-repeat;
-    background-position: center;
+.spraying-img {
+
 }
 
 /*--------- типы покрытий ----------*/
@@ -210,6 +207,7 @@ body {
 }
 
 /*--------- оборудование для напыления ----------*/
+
 .equipment {
     height: 882px;
     background-image: url("../img/background-block-plasmatron.png");
@@ -347,6 +345,7 @@ body {
 }
 
 /*--------- расходные материалы ----------*/
+
 .consumables {
     padding-top: 160px;
     padding-bottom: 190px;
@@ -901,7 +900,9 @@ li::marker {
     text-align: center;
     padding-top: 3px;
 }
+
 /*--------- заявка для консультации ----------*/
+
 .request__items {
     display: flex;
     flex-direction: column;

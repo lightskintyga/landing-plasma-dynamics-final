@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/main.css">
 
     <script src="libs/jquery-3.7.0.min.js" defer></script>
+    <script src="libs/jquery.validate.min.js" defer></script>
     <script src="js/calculator.js" defer></script>
     <script src="js/select.js" defer></script>
     <script src="js/card.js" defer></script>
@@ -101,7 +102,9 @@
             <div class="spraying">
                 <div class="container">
                     <div class="spraying__items">
-
+                        <div class="spraying__img">
+                            <img src="img/background-block-spraying.png" alt="Технология напыления" class="spraying-img">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -550,28 +553,30 @@
             <div class="request">
                 <div class="container">
                     <div class="request__items">
-                        <form class="request__form" action="#">
+                        <form class="request__form" action="sender.php" method="post">
                             <div class="request__title">
                                 <h2 class="request-h2">Оставьте заявку для консультации</h2>
                             </div>
                             <div class="request__name">
                                 <label>
-                                    <textarea class="request-input" type="text" placeholder="Введите ФИО"></textarea>
+                                    <textarea class="request-input" name="name" type="text" placeholder="Введите ФИО" spellcheck="false" required></textarea>
                                 </label>
                             </div>
                             <div class="request__phoneNumber">
                                 <label>
-                                    <textarea class="request-input" type="text" placeholder="Введите номер телефона"></textarea>
+                                    <input class="request-input" name="phone" id="phoneForm" type="text" placeholder="Введите номер телефона" required>
                                 </label>
                             </div>
                             <div class="request__question">
                                 <label>
-                                    <textarea class="request-input-question" type="text" placeholder="Объясните в чем проблема"></textarea>
+                                    <textarea class="request-input-question" name="description" type="text" spellcheck="false" placeholder="Объясните в чем проблема" required></textarea>
                                 </label>
                             </div>
                             <div class="request__sending">
-                                <a class="request-sending-text" href="#!" spellcheck="false">Отправить</a>
+                                <button class="request-sending-text send-form">Отправить</button>
                             </div>
+
+                            <div class="status"></div>
                         </form>
                     </div>
                 </div>
@@ -579,8 +584,9 @@
         </section>
     </main>
 
-    <script src="libs/flickity/flickity.pkgd.js"></script>
-    <footer class="footer" id="footer">
+    <footer class="footer" id="footer" style="position:relative; height: 596px;">
+        <img src="img/foil-1.png" alt="ф1" style="position: absolute; top: 0; left: 0;">
+        <img src="img/foil-2.png" alt="ф2" style="position: absolute; bottom: 0; right: 0;">
         <div class="container">
             <div class="footer__items">
                 <div class="footer__title">
@@ -611,5 +617,9 @@
             </div>
         </div>
     </footer>
+    <script src="libs/flickity/flickity.pkgd.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="js/maska-nomera.js"></script>
+    <script src="js/requestSending.js"></script>
 </body>
 </html>

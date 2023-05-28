@@ -96,16 +96,8 @@
 
         var textContent = changingState.textContent;
 
-        if (textContent === '1') {
-            console.log('12')
-        }
-        else {
-            console.log('45')
-        }
-
         switch (textContent) {
             case '1':
-                console.log('23')
                 complexity = 1;
                 break
             case '1.5':
