@@ -516,11 +516,6 @@ li::marker {
     display: block;
     height: 200px;
 }
-@media screen and ( min-width: 768px ) {
-    .carousel-cell img {
-        height: 400px;
-    }
-}
 .main-carousel {
     display: flex;
     width: 1050px;
@@ -905,7 +900,7 @@ li::marker {
 
 .request__items {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 .request__form {
@@ -1062,4 +1057,9 @@ textarea {
     min-height: 100%;
     width: 567px;
     height: 296px;
+}
+@media screen and ( min-width: 768px ) {
+    .carousel-cell img {
+        height: 400px;
+    }
 }
