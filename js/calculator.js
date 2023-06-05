@@ -138,15 +138,22 @@
         function getTotalPrice() {
             let timeForSpraying = getTimeForSpraying();
 
-            let totalMinTime = timeForSpraying + minTimeToPrepare;
-            console.log('Общее количество времени (при минимальном времени на подготовку: ' + totalMinTime.toFixed(3));
-            let totalMaxTime = timeForSpraying + maxTimeToPrepare;
-            console.log('Общее количество времени (при максимальном времени на подготовку: ' + totalMaxTime.toFixed(3));
+            if (timeForSpraying <= 1) {
+                let totalMinTime = timeForSpraying + minTimeToPrepare;
+                console.log('Общее количество времени (при минимальном времени на подготовку: ' + totalMinTime.toFixed(3));
+                let totalMaxTime = timeForSpraying + maxTimeToPrepare;
+                console.log('Общее количество времени (при максимальном времени на подготовку: ' + totalMaxTime.toFixed(3));
 
-            let minCostPrice = totalMinTime * 5000;
-            let maxCostPrice = totalMaxTime * 5000;
+                let minCostPrice = totalMinTime * 5000;
+                let maxCostPrice = totalMaxTime * 5000;
 
-            return [Math.ceil(minCostPrice / 0.9 * complexity), Math.ceil(maxCostPrice / 0.9 * complexity)];
+                return [Math.ceil(minCostPrice / 0.9 * complexity), Math.ceil(maxCostPrice / 0.9 * complexity)];
+            }
+            else {
+                let costPrice = 2 * timeForSpraying * 5000;
+
+                return [Math.ceil(costPrice / 0.9 * complexity)]
+            }
         }
 
         minTotalPrice = getTotalPrice()[0];
@@ -154,6 +161,11 @@
 
         var div = document.getElementById('cost-info');
 
-        div.innerHTML = 'от ' + minTotalPrice + ' руб. ' + 'до ' + maxTotalPrice + ' руб.';
+        if (maxTotalPrice !== undefined) {
+            div.innerHTML = 'от ' + minTotalPrice + ' руб. ' + 'до ' + maxTotalPrice + ' руб.';
+        }
+        else {
+            div.innerHTML = minTotalPrice + ' руб.';
+        }
     }
 })();

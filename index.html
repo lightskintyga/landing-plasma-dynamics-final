@@ -24,11 +24,16 @@
         <div class="container">
             <div class="header__top-row">
                 <div class="header__nav">
+                    <div class="menu__icon">
+                        <span class="menu-span"></span>
+                        <span class="menu-span"></span>
+                        <span class="menu-span"></span>
+                    </div>
                     <nav class="nav" id="menu">
                         <ul class="nav-ul">
                             <li><a class="nav__link" id="link-first" href="#section__services">Услуги</a></li>
                             <li><a class="nav__link" id="link-second" href="#section__calculator">Стоимость</a></li>
-                            <li><img src="img/logo.svg" alt="logo"></li>
+                            <li class="menu__logo"><img src="img/logo.svg" alt="logo"></li>
                             <li><a class="nav__link" id="link-third" href="#section__partners">Партнеры</a></li>
                             <li><a class="nav__link" id="link-fourth" href="#footer">Контакты</a></li>
                         </ul>
@@ -82,16 +87,21 @@
         <section class="section__about-company">
             <div class="about-company">
                 <div class="container">
-                    <div class="about-company__items">
-                        <div class="about-company__items-info">
-                            <div class="about-company__info-text">
-                                <h2 class="company-name-text">ООО «Плазма Динамика»</h2>
-                                <p class="company-description-text">Наша компания специализируетя на производстве плазмотронов для напыления функциональных покрытий. Группа технологий получения и обработки материалов с использованием нагрева исходных продуктов в плазменной струе или перевода их в плазменное состояние. Плазменное напыление позволяет увеличить срок эксплуатации деталей, а также восстанавливать изношенное изделие. Данная технология  широко применяется для защиты от высокотемпературного износа, придания коррозионной стойкости, для упрочнения поверхности деталей, работающих при высоких нагрузках.</p>
+                    <div class="about-company__cont" style="position: relative">
+                        <img src="img/ball_silver.png" alt="шар серебро" style="position:absolute; top: 50px; left: 0;">
+                        <img src="img/ball_gold.png" alt="шар золото" style="position: absolute; bottom: 120px; right: 560px">
+                        <img src="img/ball_copper.png" alt="шар медь" style="position:absolute; top: 150px; right: 0;">
+                        <div class="about-company__items">
+                            <div class="about-company__items-info">
+                                <div class="about-company__info-text">
+                                    <h2 class="company-name-text">ООО «Плазма Динамика»</h2>
+                                    <p class="company-description-text">Наша компания специализируетя на производстве плазмотронов для напыления функциональных покрытий. Группа технологий получения и обработки материалов с использованием нагрева исходных продуктов в плазменной струе или перевода их в плазменное состояние. Плазменное напыление позволяет увеличить срок эксплуатации деталей, а также восстанавливать изношенное изделие. Данная технология  широко применяется для защиты от высокотемпературного износа, придания коррозионной стойкости, для упрочнения поверхности деталей, работающих при высоких нагрузках.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="about-company__items-coatings">
-                            <div class="about-company__coating__img">
-                                <img class="img-coatings" src="img/coatings.png" alt="Покрытия">
+                            <div class="about-company__items-coatings">
+                                <div class="about-company__coating__img">
+                                    <img class="img-coatings" src="img/coatings.png" alt="Покрытия">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -272,42 +282,105 @@
                         </div>
                         <div class="benefits__row">
                             <div class="benefits__row-1">
-                                <div class="benefits__row-items">
+                                <div class="benefits__row-items" id="benefits-row1">
                                     <div class="benefits__row-img">
                                         <img class="benefits-img1" src="img/benefit-1.png" alt="Специализированное ПО">
                                     </div>
                                     <div class="benefits__row-text">
                                         <p class="benefits-text">Квалифицированная <br>команда</p>
                                     </div>
+                                    <div class="benefits__row-text-detailed">
+                                        <button type="button" onclick="showBenefit1()" class="benefits-text-detailed">Подробнее</button>
+                                    </div>
+                                </div>
+                                <div class="benefits-card" id="benefits-card1">
+                                    <div class="benefits-card__button-back">
+                                        <button type='button' onclick="backBenefit1()" class="benefits-back-button"></button>
+                                    </div>
+                                    <div class="benefits-card-text-title">
+                                        <p class="benefits-card-text-p-1">Квалифицированная <br>команда</p>
+                                    </div>
+                                    <div class="benefits-card-text-description">
+                                        <p class="benefits-card-text-description-p-1">Нашими сотрудниками являются кандидаты технических наук в области материаловедения,
+                                            химии твердого тела, металлургии и плазменных технологий, специалисты компании имеют стаж более 10 лет работы в области
+                                            создания упрочняющих покрытий.</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="benefits__row-2">
-                                <div class="benefits__row-items">
+                                <div class="benefits__row-items" id="benefits-row2">
                                     <div class="benefits__row-img">
                                         <img class="benefits-img2" src="img/benefit-2.png" alt="Специализированное ПО">
                                     </div>
                                     <div class="benefits__row-text">
                                         <p class="benefits-text">Быстрая <br>работа</p>
                                     </div>
+                                    <div class="benefits__row-text-detailed">
+                                        <button type="button" onclick="showBenefit2()" class="benefits-text-detailed">Подробнее</button>
+                                    </div>
+                                </div>
+                                <div class="benefits-card" id="benefits-card2">
+                                    <div class="benefits-card__button-back">
+                                        <button type='button' onclick="backBenefit2()" class="benefits-back-button"></button>
+                                    </div>
+                                    <div class="benefits-card-text-title">
+                                        <p class="benefits-card-text-p-2">Быстрая работа</p>
+                                    </div>
+                                    <div class="benefits-card-text-description">
+                                        <p class="benefits-card-text-description-p-2">Слаженная команда и работа
+                                            без посредников обеспечивают
+                                            быструю отработку каждого заказа</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="benefits__row-3">
-                                <div class="benefits__row-items">
+                                <div class="benefits__row-items" id="benefits-row3">
                                     <div class="benefits__row-img">
                                         <img class="benefits-img3" src="img/benefit-3.png" alt="Специализированное ПО">
                                     </div>
                                     <div class="benefits__row-text">
                                         <p class="benefits-text">Качественные <br>материалы и гарантия</p>
                                     </div>
+                                    <div class="benefits__row-text-detailed">
+                                        <button type="button" onclick="showBenefit3()" class="benefits-text-detailed">Подробнее</button>
+                                    </div>
+                                </div>
+                                <div class="benefits-card" id="benefits-card3">
+                                    <div class="benefits-card__button-back">
+                                        <button type='button' onclick="backBenefit3()" class="benefits-back-button"></button>
+                                    </div>
+                                    <div class="benefits-card-text-title">
+                                        <p class="benefits-card-text-p-3">Качественные <br>материалы и гарантия</p>
+                                    </div>
+                                    <div class="benefits-card-text-description">
+                                        <p class="benefits-card-text-description-p-3">Для наплавки покрытий мы используем материалы только от проверенных поставщиков.
+                                            На каждое покрытие мы даем паспорт и гарантийные обязательства.</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="benefits__row-4">
-                                <div class="benefits__row-items">
+                                <div class="benefits__row-items" id="benefits-row4">
                                     <div class="benefits__row-img">
                                         <img class="benefits-img4" src="img/benefit-4.png" alt="Специализированное ПО">
                                     </div>
                                     <div class="benefits__row-text">
                                         <p class="benefits-text">Высокое качество</p>
+                                    </div>
+                                    <div class="benefits__row-text-detailed">
+                                        <button type="button" onclick="showBenefit4()" class="benefits-text-detailed">Подробнее</button>
+                                    </div>
+                                </div>
+                                <div class="benefits-card" id="benefits-card4">
+                                    <div class="benefits-card__button-back">
+                                        <button type='button' onclick="backBenefit4()" class="benefits-back-button"></button>
+                                    </div>
+                                    <div class="benefits-card-text-title">
+                                        <p class="benefits-card-text-p-4">Высокое качество</p>
+                                    </div>
+                                    <div class="benefits-card-text-description">
+                                        <p class="benefits-card-text-description-p-4">Современное оборудование
+                                            по плазменной наплавке
+                                            и широкая приборная база методов контроля полученных покрытий позволяют гаранировать выское качество наших услуг.</p>
                                     </div>
                                 </div>
                             </div>
@@ -557,20 +630,22 @@
                             <div class="request__title">
                                 <h2 class="request-h2">Оставьте заявку для консультации</h2>
                             </div>
-                            <div class="request__name">
-                                <label>
-                                    <textarea class="request-input" name="name" type="text" placeholder="Введите ФИО" spellcheck="false" required></textarea>
-                                </label>
-                            </div>
-                            <div class="request__phoneNumber">
-                                <label>
-                                    <input class="request-input" name="phone" id="phoneForm" type="text" placeholder="Введите номер телефона" required>
-                                </label>
-                            </div>
-                            <div class="request__question">
-                                <label>
-                                    <textarea class="request-input-question" name="description" type="text" spellcheck="false" placeholder="Объясните в чем проблема" required></textarea>
-                                </label>
+                            <div class="request__fields">
+                                <div class="request__name">
+                                    <label>
+                                        <textarea class="request-input" name="name" type="text" placeholder="Введите ФИО" spellcheck="false" required></textarea>
+                                    </label>
+                                </div>
+                                <div class="request__phoneNumber">
+                                    <label>
+                                        <input class="request-input" name="phone" id="phoneForm" type="text" placeholder="Введите номер телефона" required>
+                                    </label>
+                                </div>
+                                <div class="request__question">
+                                    <label>
+                                        <textarea class="request-input-question" name="description" type="text" spellcheck="false" placeholder="Объясните в чем проблема" required></textarea>
+                                    </label>
+                                </div>
                             </div>
                             <div class="request__sending">
                                 <button type="submit" class="request-sending-text send-form">Отправить</button>
@@ -584,9 +659,7 @@
         </section>
     </main>
 
-    <footer class="footer" id="footer" style="position:relative; height: 596px;">
-        <img src="img/foil-1.png" alt="ф1" style="position: absolute; top: 0; left: 0;">
-        <img src="img/foil-2.png" alt="ф2" style="position: absolute; bottom: 0; right: 0;">
+    <footer class="footer" id="footer">
         <div class="container">
             <div class="footer__items">
                 <div class="footer__title">

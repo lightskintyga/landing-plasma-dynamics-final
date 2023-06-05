@@ -129,6 +129,31 @@ body {
 .header__footer-title {
     padding-top: 44px;
 }
+.menu__icon {
+    display: block;
+    width: 30px;
+    height: 18px;
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+
+
+}
+.menu-span {
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #956F29;
+}
+.menu-span:first-child {
+    top: 0;
+}
+.menu-span:last-child {
+    top: auto;
+    bottom: 0;
+}
 
 /*--------- main ----------*/
 
@@ -208,14 +233,19 @@ body {
 
 /*--------- оборудование для напыления ----------*/
 
-.equipment {
+/*.equipment {*/
+/*    height: 882px;*/
+/*    background-image: url("../img/background-block-plasmatron.png");*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: center;*/
+/*    background-size: cover;*/
+/*}*/
+.equipment__items {
     height: 882px;
     background-image: url("../img/background-block-plasmatron.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
-}
-.equipment__items {
+    background-size: auto;
     display: flex;
     justify-content: center;
     padding-top: 57px;
@@ -409,7 +439,7 @@ body {
     background-image: url("../img/background-block-services.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: auto;
 }
 .services__items {
     padding-top: 330px;
@@ -490,6 +520,116 @@ li::marker {
     max-width: 123px;
     max-height: 134px;
 }
+.benefits-text-detailed {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: underline;
+    transition: all .5s;
+    cursor: url("../img/cursor.png") 4 1, default;
+}
+.benefits-text-detailed:hover {
+    color: #956F29;
+    text-decoration: underline;
+}
+.benefits-card-text-p-1 {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 12px;
+    text-align: center;
+    padding-top: 41px;
+}
+.benefits-card-text-description-p-1 {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 9px;
+    padding-top: 18px;
+    width: 162px;
+}
+.benefits-card-text-p-2 {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 12px;
+    text-align: center;
+    padding-top: 57px;
+}
+.benefits-card-text-description-p-2 {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 9px;
+    padding-top: 26px;
+    width: 162px;
+}
+.benefits-card-text-p-3 {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 12px;
+    text-align: center;
+    padding-top: 49px;
+}
+.benefits-card-text-description-p-3 {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 9px;
+    padding-top: 24px;
+    width: 152px;
+}
+.benefits-card-text-p-4 {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 12px;
+    text-align: center;
+    padding-top: 49px;
+}
+.benefits-card-text-description-p-4 {
+    font-family: Disket-Mono-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 9px;
+    padding-top: 28px;
+    width: 157px;
+}
+.benefits-card {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: #0E0D0D;
+    width: 205px;
+    height: 205px;
+}
+.benefits-back-button {
+    position: absolute;
+    top: 13px;
+    left: 14px;
+    background-image: url("../img/back-button.png");
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 11px;
+    transition: all .5s;
+    cursor: url("../img/cursor.png") 4 1, default;
+}
+.benefits-back-button:hover {
+    background-image: url("../img/back-button-hover.png");
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 11px;
+}
 
 /*--------- примеры работ ----------*/
 
@@ -499,6 +639,7 @@ li::marker {
     align-items: center;
     row-gap: 46px;
     padding-top: 136px;
+    padding-bottom: 90px;
 }
 .examples-h2 {
     font-family: Disket-Mono-Regular, sans-serif;
@@ -549,6 +690,13 @@ li::marker {
 
 /*--------- расчет стоимости ----------*/
 
+.cost-calculation {
+    height: 1000px;
+    background-image: url("../img/background-block-cost-calculation.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+}
 .cost-calculation__items {
     display: flex;
     flex-direction: column;
@@ -901,7 +1049,6 @@ li::marker {
 .request__items {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 .request__form {
     display: flex;
@@ -1008,6 +1155,13 @@ textarea {
 
 /*--------- контакты ----------*/
 
+.footer {
+    height: 600px;
+    background-image: url("../img/background-block-footer.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+}
 .footer__items {
     display: flex;
     flex-direction: column;
@@ -1061,5 +1215,31 @@ textarea {
 @media screen and ( min-width: 768px ) {
     .carousel-cell img {
         height: 400px;
+    }
+}
+@media (max-width: 1000px) {
+    .nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: goldenrod;
+    }
+    .nav-ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin: auto;
+        text-decoration: underline;
+    }
+    .menu__logo {
+        display: none;
+    }
+    .nav__link {
+        display: block;
+        text-decoration: underline;
+        font-size: 40px;
+        line-height: 70px;
     }
 }
