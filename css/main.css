@@ -132,9 +132,6 @@ body.lock {
 .header__footer-title {
     padding-top: 44px;
 }
-.menu__logo {
-    display: none;
-}
 .menu__icon {
     display: none;
     width: 30px;
@@ -144,6 +141,9 @@ body.lock {
     cursor: pointer;
     border-radius: 2px;
 }
+.menu__logoMobile {
+    display: none;
+}
 .menu-span {
     position: absolute;
     top: calc(50% - 1px);
@@ -152,6 +152,7 @@ body.lock {
     height: 2px;
     background-color: #E1E0DF;
     transition: all 0.2s;
+    border-radius: 2px;
 }
 .menu-span:first-child {
     top: 0;
@@ -363,8 +364,8 @@ body.lock {
     align-items: center;
     background: #0E0D0D;
     border-radius: 22px;
-    width: 438px;
-    height: 473px;
+    width: 100%;
+    height: 474px;
 }
 .card-h2 {
     font-family: Disket-Mono-Regular, sans-serif;
@@ -1238,15 +1239,19 @@ textarea {
     }
 }
 @media (max-width: 1000px) {
+
     /* header */
 
-    .menu__logo {
-        display: block;
-    }
     .menu__icon {
         display: block;
         position: absolute;
-        right: 0;
+        top: 38px;
+        right: 24px;
+    }
+    .menu__logoMobile {
+        display: block;
+        padding-left: 25px;
+        padding-top: 15px;
     }
     .nav {
         position: absolute;
@@ -1283,10 +1288,7 @@ textarea {
         left: 0;
     }
 
-
-    /* main */
-
-    /* о компании */
+    /* типы покрытий */
 
     .types-coatings__row {
         display: flex;
@@ -1301,5 +1303,83 @@ textarea {
     .coating__items-text {
         -webkit-writing-mode: vertical-rl;
         writing-mode: vertical-rl;
+    }
+
+    /* расходные материалы */
+
+    .consumables__row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+    }
+
+    /* расчет стоимости */
+
+    .cost-calculation__calculator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cost-calculation__secondColumn {
+        padding-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* наша команда */
+
+    .team__row {
+        display: flex;
+        row-gap: 50px;
+        justify-content: center;
+    }
+    .team__row-worker {
+        width: 50%;
+    }
+}
+@media (max-width: 1100px) {
+
+    /* о компании */
+
+    .about-company__items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 28px;
+    }
+}
+@media (max-width: 900px) {
+
+    /* преимущества */
+
+    .benefits__row {
+        justify-content: space-evenly;
+        row-gap: 100px;
+        column-gap: 200px;
+    }
+
+    /* партнеры */
+
+    .partners__row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        row-gap: 75px;
+    }
+}
+@media (max-width: 1260px) {
+
+    /* footer */
+
+    .footer {
+        background-image: none;
+    }
+    .footer__main {
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 20px;
     }
 }
