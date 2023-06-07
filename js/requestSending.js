@@ -1,20 +1,23 @@
-$('#request__form').submit(function(e){
-	var popup = $('#popup_text');
-	e.preventDefault();
-	$.ajax({
-		url: "/sender.php",
-		type: "POST",
-		data: $('#request__form').serialize(),
-		success: function(response) {
-			//обработка успешной отправки
-			popup.html('Ваше сообщение успешно отправлено!').delay(2000).fadeOut(1000);
-
-			$('#nameForm').val('');
-			$('#phoneForm').val('');
-			$('#descriptionForm').val('');
-		},
-		error: function(response) {
-			//обработка ошибок при отправке
-		}
+$(document).ready(function(){
+	$('#sendForm').click(function(){
+		// собираем данные с формы
+		var user_name    = $('#nameForm').val();
+		var user_phone   = $('#phoneForm').val();
+		var text_comment = $('#descriptionForm').val();
+		// отправляем данные
+		$.ajax({
+			url: "/sender.php", // куда отправляем
+			type: "post", // метод передачи
+			dataType: "json", // тип передачи данных
+			data: { // что отправляем
+				"nameForm":    user_name,
+				"phoneForm":   user_phone,
+				"descriptionForm": text_comment
+			},
+			// после получения ответа сервера
+			success: function(data){
+				$('.messages').html(data.result); // выводим ответ сервера
+			}
+		});
 	});
 });
