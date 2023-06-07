@@ -631,14 +631,14 @@
             <div class="request">
                 <div class="container">
                     <div class="request__items">
-                        <form class="request__form" id="request__form" action="sender.php" method="post">
+                        <form class="request__form" id="request__form">
                             <div class="request__title">
                                 <h2 class="request-h2">Оставьте заявку для консультации</h2>
                             </div>
                             <div class="request__fields">
                                 <div class="request__name">
                                     <label>
-                                        <input class="request-input" name="name" type="text" placeholder="Введите ФИО" spellcheck="false" required></input>
+                                        <input class="request-input" id="nameForm" name="name" type="text" placeholder="Введите ФИО" spellcheck="false" required>
                                     </label>
                                 </div>
                                 <div class="request__phoneNumber">
@@ -648,12 +648,12 @@
                                 </div>
                                 <div class="request__question">
                                     <label>
-                                        <textarea class="request-input-question" name="description" type="text" spellcheck="false" placeholder="Объясните, в чем проблема" required></textarea>
+                                        <textarea class="request-input-question" id="descriptionForm" name="description" type="text" spellcheck="false" placeholder="Объясните, в чем проблема" required></textarea>
                                     </label>
                                 </div>
                             </div>
                             <div class="request__sending">
-                                <button type="submit" class="request-sending-text send-form">Отправить</button>
+                                <input type="submit" class="request-sending-text send-form" value="Отправить">
                             </div>
 
                             <div class="status"></div>
