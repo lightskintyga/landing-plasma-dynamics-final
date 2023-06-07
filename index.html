@@ -631,7 +631,7 @@
             <div class="request">
                 <div class="container">
                     <div class="request__items">
-                        <form class="request__form" id="request__form">
+                        <form class="request__form" id="request__form" onsubmit="sendMail(); reset(); return false;">
                             <div class="request__title">
                                 <h2 class="request-h2">Оставьте заявку для консультации</h2>
                             </div>
@@ -653,10 +653,8 @@
                                 </div>
                             </div>
                             <div class="request__sending">
-                                <input type="button" class="request-sending-text send-form" id="sendForm" value="Отправить">
+                                <button type="submit" class="request-sending-text send-form" id="sendForm">Отправить</button>
                             </div>
-
-                            <div class="status"></div>
                         </form>
                     </div>
                 </div>
@@ -698,6 +696,24 @@
     <script src="libs/flickity/flickity.pkgd.js"></script>
     <script src="https://unpkg.com/imask"></script>
     <script src="js/maska-nomera.js"></script>
-    <script src="js/requestSending.js"></script>
+<!--    <script src="js/requestSending.js"></script>-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendMail() {
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "plasmadyntest@gmail.com",
+                Password : "54509CCC21B09CF5816E83D3046F1A899405",
+                To : 'daniilivanov7010@gmail.com',
+                From : "plasmadyntest@gmail.com",
+                Subject : "Новое обращение с сайта plasma-dynamics.ru",
+                Body : "ФИО: " + document.getElementById("nameForm").value
+                    + "<br> Телефон: " + document.getElementById("phoneForm").value
+                    + "<br> Текст: " + document.getElementById("descriptionForm").value
+            }).then(
+                message => alert("Форма отправлена!")
+            );
+        }
+    </script>
 </body>
 </html>
