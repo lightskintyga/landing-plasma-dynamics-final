@@ -1,28 +1,26 @@
-jQuery(document).ready(function () {
-	jQuery('.send-form').click( function() {
-    	var form = jQuery(this).closest('form');
-    	
-    	if ( form.valid() ) {
-    		form.css('opacity','.5');
-    		var actUrl = form.attr('action');
-
-    		jQuery.ajax({
-    			url: actUrl,
-    			type: 'post',
-    			dataType: 'html',
-    			data: form.serialize(),
-    			success: function(data) {
-    				form.html(data);
-    				form.css('opacity','1');
-                    //form.find('.status').html('форма отправлена успешно');
-                    //$('#myModal').modal('show') // для бутстрапа
-    			},
-    			error:	 function() {
-    			     form.find('.status').html('серверная ошибка');
-    			}
-    		});
-    	}
-    });
-
-
+$(document).ready(function () {
+	$("request__form").submit(function () {
+		// Получение ID формы
+		var formID = $(this).attr('id');
+		// Добавление решётки к имени ID
+		var formNm = $('#' + formID);
+		$.ajax({
+			type: "POST",
+			url: '/sender.php',
+			data: formNm.serialize(),
+			beforeSend: function () {
+				// Вывод текста в процессе отправки
+				$(formNm).html('<p style="text-align:center">Отправка...</p>');
+			},
+			success: function (data) {
+				// Вывод текста результата отправки
+				$(formNm).html('<p style="text-align:center">'+data+'</p>');
+			},
+			error: function (jqXHR, text, error) {
+				// Вывод текста ошибки отправки
+				$(formNm).html(error);
+			}
+		});
+		return false;
+	});
 });
