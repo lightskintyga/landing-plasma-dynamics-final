@@ -1585,5 +1585,40 @@ textarea {
 
     /* оборудование */
 
-
+    .equipment-h2 {
+        font-size: 15px;
+    }
+    .plasmatron-type-info {
+        font-size: 13px;
+        padding-top: 18px;
+    }
+    .plasmatron-price-info {
+        font-size: 12px;
+    }
+    .equipment__items {
+        height: 638px;
+    }
+    .equipment__form {
+        height: 508px;
+        width: 340px;
+    }
+    .equipment__img {
+        width: 300px;
+        padding-top: 20px;
+    }
+    .equipment__title {
+        padding-top: 27px;
+    }
+    .plasmatron__info-card {
+        top: 20px;
+        height: 95%;
+    }
+    .card-h2 {
+        font-size: 13px;
+        padding-top: 26px;
+    }
+    .card-parameter {
+        font-size: 11px;
+        line-height: unset;
+    }
 }
