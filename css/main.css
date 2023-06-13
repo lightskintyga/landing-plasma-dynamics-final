@@ -1530,4 +1530,7 @@ textarea {
     .header__D-img {
         width: 138px;
     }
+    #menu-link-first {
+        align-self: flex-end;
+    }
 }
