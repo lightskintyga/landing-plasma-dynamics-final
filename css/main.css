@@ -1321,17 +1321,21 @@ textarea {
 
     .types-coatings__row {
         display: flex;
-        column-gap: 200px;
+        column-gap: 20px;
         align-items: center;
         justify-content: space-between;
+        row-gap: 45px;
     }
     .coating__items {
         display: flex;
-        align-items: revert;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        column-gap: 5px;
     }
     .coating__items-text {
         -webkit-writing-mode: vertical-rl;
         writing-mode: vertical-rl;
+        transform: rotate(180deg);
     }
 
     /* расходные материалы */
@@ -1564,5 +1568,18 @@ textarea {
     }
     .spraying-img-mobile {
         display: flex;
+    }
+
+    /* типы покрытий */
+
+    .coatings-h2 {
+        font-size: 15px;
+    }
+    .coating-type-text {
+        font-size: 13px;
+    }
+    .coating-img {
+        width: 71px;
+        height: 231px;
     }
 }
