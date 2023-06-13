@@ -1,23 +1,17 @@
-$(document).ready(function(){
-	$('#sendForm').click(function(){
-		// собираем данные с формы
-		var user_name    = $('#nameForm').val();
-		var user_phone   = $('#phoneForm').val();
-		var text_comment = $('#descriptionForm').val();
-		// отправляем данные
-		$.ajax({
-			url: "/sender.php", // куда отправляем
-			type: "post", // метод передачи
-			dataType: "json", // тип передачи данных
-			data: { // что отправляем
-				"nameForm":    user_name,
-				"phoneForm":   user_phone,
-				"descriptionForm": text_comment
-			},
-			// после получения ответа сервера
-			success: function(data){
-				$('.messages').html(data.result); // выводим ответ сервера
-			}
-		});
-	});
-});
+function sendMail() {
+	Email.send({
+		Host : "smtp.elasticemail.com",
+		Username : "plasmadyntest@gmail.com",
+		Password : "54509CCC21B09CF5816E83D3046F1A899405",
+		To : 'daniilivanov7010@gmail.com',
+		From : "plasmadyntest@gmail.com",
+		Subject : "Новое обращение с сайта plasma-dynamics.ru",
+		Body : "ФИО: " + document.getElementById("nameForm").value
+			+ "<br> Телефон: " + document.getElementById("phoneForm").value
+			+ "<br> Текст: " + document.getElementById("descriptionForm").value
+	}).then(
+		message => alert("Форма отправлена!")
+	);
+}
+
+window.sendMail = sendMail;

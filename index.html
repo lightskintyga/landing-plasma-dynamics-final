@@ -13,13 +13,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
 
     <script src="libs/jquery-3.7.0.min.js" defer></script>
-<!--    <script src="libs/jquery.validate.min.js" defer></script>-->
-    <script src="js/mobile__menu.js" defer></script>
-    <script src="js/calculator.js" defer></script>
-    <script src="js/select.js" defer></script>
-    <script src="js/card.js" defer></script>
-    <script src="js/slider.js" defer></script>
-    <script src="js/animation__nav.js" defer></script>
+    <script src="dist/bundle.js" defer></script>
 </head>
 <body>
     <div class="header__top">
@@ -519,7 +513,6 @@
                                                     <label class="label-complexity" for="complexity-1">1</label>
                                                     <input type="radio" class="radio" value="1" id="complexity-1" name="complexity"/>
                                                 </div>
-
                                                 <div class="option">
                                                     <label class="label-complexity" for="complexity-1.5">1.5</label>
                                                     <input type="radio" class="radio" value="1.5" id="complexity-1.5" name="complexity"/>
@@ -542,7 +535,7 @@
                                     <input id="total_estimate" disabled="true" type="text" name="total" size="0" style="display: none;">
                                 </p>
                             </div>
-                                <p class="cost-info">Приблизительная стоимость: <span id="cost-info"></span></p>
+                            <p class="cost-info">Приблизительная стоимость: <span id="cost-info"></span></p>
                         </form>
                     </div>
                 </div>
@@ -605,7 +598,7 @@
                                     <img src="img/worker-3.png" alt="Куклин Илья" class="worker-photo-1">
                                 </div>
                                 <div class="worker-name">
-                                    <p class="worker-name-text">Алексей Идиятулин</p>
+                                    <p class="worker-name-text">Идиятулин Алексей</p>
                                 </div>
                                 <div class="worker-post">
                                     <p class="worker-post-text">Управление финансами, привлечение <br>инвестиций, отчетность</p>
@@ -616,7 +609,7 @@
                                     <img src="img/worker-4.png" alt="Куклин Илья" class="worker-photo-1">
                                 </div>
                                 <div class="worker-name">
-                                    <p class="worker-name-text">Ривхат Валиев</p>
+                                    <p class="worker-name-text">Валиев Ривхат</p>
                                 </div>
                                 <div class="worker-post">
                                     <p class="worker-post-text">R&D, патентование</p>
@@ -695,25 +688,6 @@
     </footer>
     <script src="libs/flickity/flickity.pkgd.js"></script>
     <script src="https://unpkg.com/imask"></script>
-    <script src="js/maska-nomera.js"></script>
-<!--    <script src="js/requestSending.js"></script>-->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendMail() {
-            Email.send({
-                Host : "smtp.elasticemail.com",
-                Username : "plasmadyntest@gmail.com",
-                Password : "54509CCC21B09CF5816E83D3046F1A899405",
-                To : 'daniilivanov7010@gmail.com',
-                From : "plasmadyntest@gmail.com",
-                Subject : "Новое обращение с сайта plasma-dynamics.ru",
-                Body : "ФИО: " + document.getElementById("nameForm").value
-                    + "<br> Телефон: " + document.getElementById("phoneForm").value
-                    + "<br> Текст: " + document.getElementById("descriptionForm").value
-            }).then(
-                message => alert("Форма отправлена!")
-            );
-        }
-    </script>
 </body>
 </html>

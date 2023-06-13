@@ -36,3 +36,14 @@ function backBenefit4() {
     document.getElementById('benefits-row4').style.display = "flex";
     document.getElementById('benefits-card4').style.display = "none";
 }
+
+window.show = show;
+window.back = back;
+window.showBenefit1 = showBenefit1;
+window.backBenefit1 = backBenefit1;
+window.showBenefit2 = showBenefit2;
+window.backBenefit2 = backBenefit2;
+window.showBenefit3 = showBenefit3;
+window.backBenefit3 = backBenefit3;
+window.showBenefit4 = showBenefit4;
+window.backBenefit4 = backBenefit4;
