@@ -690,6 +690,7 @@ li::marker {
     row-gap: 46px;
     padding-top: 136px;
     padding-bottom: 90px;
+    overflow-x: hidden;
 }
 .examples-h2 {
     font-family: Disket-Mono-Regular, sans-serif;
