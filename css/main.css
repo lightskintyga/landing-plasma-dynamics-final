@@ -176,6 +176,31 @@ body.lock {
     bottom: calc(50% - 1px);
 }
 
+/*--------- header__mobile ----------*/
+
+.header__title-main-mobile {
+    display: none;
+    padding-top: 46px;
+}
+.header__P-info {
+    display: flex;
+    justify-content: space-around;
+}
+.header__img {
+    display: flex;
+    justify-content: center;
+}
+.header__D-info-menu {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+.header__info-menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+}
+
 /*--------- main ----------*/
 
 /*--------- о компании ----------*/
@@ -1460,5 +1485,48 @@ textarea {
     .benefits-back-button {
         top: 25px;
         left: 50px;
+    }
+}
+@media (max-width: 800px) {
+
+    /* header */
+
+    .header__title-main {
+        display: none;
+    }
+    .header__title-main-mobile {
+        display: block;
+    }
+    .header-info-1 {
+        max-width: 143px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .header-info-2 {
+        max-width: 150px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: unset;
+    }
+    .menu {
+        row-gap: 1px;
+        width: unset;
+    }
+    .menu__link {
+        font-size: 12px;
+    }
+    .header__P-img {
+        max-width: unset;
+        width: 138px;
+    }
+    .header__title-logo {
+        width: 420px;
+    }
+    .header__D-img {
+        width: 138px;
     }
 }
