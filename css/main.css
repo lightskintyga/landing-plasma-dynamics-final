@@ -1437,13 +1437,13 @@ textarea {
         height: 105px;
     }
     .benefits-text {
-        font-size: 10px;
+        font-size: 11px;
     }
     .benefits-text-detailed {
-        font-size: 9px;
+        font-size: 10px;
     }
     .benefits-h2 {
-        font-size: 12px;
+        font-size: 15px;
     }
     .benefits__row {
         row-gap: 40px;
@@ -1463,16 +1463,16 @@ textarea {
         width: 50%;
     }
     .benefits-card-text-p-1 {
-        font-size: 10px;
+        font-size: 11px;
     }
     .benefits-card-text-p-2 {
-        font-size: 10px;
+        font-size: 11px;
     }
     .benefits-card-text-p-3 {
-        font-size: 10px;
+        font-size: 11px;
     }
     .benefits-card-text-p-4 {
-        font-size: 10px;
+        font-size: 11px;
     }
     .benefits-card-text-description-p-1 {
         font-size: 9px;
@@ -1620,5 +1620,117 @@ textarea {
     .card-parameter {
         font-size: 11px;
         line-height: unset;
+    }
+
+    /* расходные материалы */
+
+    .consumables__items {
+        row-gap: 64px;
+    }
+    .consumables-h2 {
+        font-size: 15px;
+    }
+    .consumable__item-1__text {
+        font-size: 13px;
+    }
+    .item-1__img {
+        width: 330px;
+    }
+
+    /* наши услуги */
+
+    .services-title {
+        font-size: 15px;
+    }
+    .services-list {
+        font-size: 13px;
+    }
+
+    /* примеры работ */
+
+    .examples-h2 {
+        font-size: 15px;
+    }
+
+    /* расчет стоимости */
+
+    .cost-calculation-h2 {
+        font-size: 15px;
+    }
+    .cost-calculation-h2-p {
+        font-size: 13px;
+    }
+    .surfaceView-text {
+        font-size: 14px;
+    }
+    .calculator__setting-text {
+        font-size: 14px;
+    }
+    .surfaceView-type-text {
+        font-size: 12px;
+    }
+    .calculator__input {
+        font-size: 14px;
+        width: 300px;
+        height: 30px;
+    }
+    .selected {
+        font-size: 14px;
+    }
+    .calculator-button {
+        font-size: 14px;
+    }
+    .cost-info {
+        font-size: 13px;
+    }
+
+    /* партнеры */
+
+    .partners__items {
+        row-gap: 40px;
+    }
+    .partners-h2 {
+        font-size: 15px;
+    }
+    .partners-img-1 {
+        width: 220px;
+    }
+    .partners-img-2 {
+        width: 220px;
+    }
+    .partners-img-3 {
+        width: 220px;
+    }
+
+    /* наша команда */
+
+    .team-h2 {
+        font-size: 15px;
+    }
+    .worker-name-text {
+        font-size: 13px;
+    }
+    .worker-post-text {
+        font-size: 12px;
+    }
+    .worker-photo-1 {
+        width: 126px;
+        height: 131px;
+    }
+
+    /* заявка для консультации */
+
+    /* footer */
+
+    /* контакты */
+
+    .footer-h2 {
+        font-size: 15px;
+    }
+    .footer-head {
+        font-size: 13px;
+    }
+    .footer-text {
+        font-size: 13px;
     }
 }
