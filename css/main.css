@@ -242,6 +242,9 @@ body.lock {
 .spraying-img {
 
 }
+.spraying-img-mobile {
+    display: none;
+}
 
 /*--------- типы покрытий ----------*/
 
@@ -1548,5 +1551,18 @@ textarea {
     }
     .img-coatings {
         width: 310px;
+    }
+
+    /* технология напыления */
+
+    .spraying__img {
+        display: flex;
+        justify-content: center;
+    }
+    .spraying-img {
+        display: none;
+    }
+    .spraying-img-mobile {
+        display: flex;
     }
 }
