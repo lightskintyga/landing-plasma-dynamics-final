@@ -194,6 +194,7 @@ body.lock {
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
+    padding-top: 10px;
 }
 .header__info-menu {
     display: flex;
